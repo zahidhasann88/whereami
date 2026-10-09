@@ -12,3 +12,7 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    ignore:
+      # Action v7+ requires migrating the linter and its configuration to v2.
+      - dependency-name: golangci/golangci-lint-action
+        update-types: ["version-update:semver-major"]
