@@ -53,7 +53,7 @@ go build -o bin/whereami.exe ./cmd/whereami
 .\bin\whereami.exe
 ```
 
-whereami has two third-party dependencies: [spf13/cobra](https://github.com/spf13/cobra) for the command line and [shirou/gopsutil/v3](https://github.com/shirou/gopsutil) for process and socket information. Git is called as the `git` binary; Docker is queried over its HTTP API. There is no Docker SDK dependency.
+whereami uses [spf13/cobra](https://github.com/spf13/cobra) for the command line, [shirou/gopsutil/v3](https://github.com/shirou/gopsutil) for process and socket information, and [go-winio](https://github.com/microsoft/go-winio) for Windows named pipes. Git is called as the `git` binary; Docker is queried over its HTTP API. There is no Docker SDK dependency.
 
 ## Example
 
@@ -438,7 +438,7 @@ These were decided for v0.1. They are listed so you can check them against your 
 **Testing limits**
 
 - The Docker client is tested against a fake Engine API served on a real unix socket, and by JSON fixtures. It has not been tested against a live Docker daemon in CI. Expect rough edges with unusual daemon setups.
-- The Windows named-pipe transport is compiled and vetted for Windows, but it has not been run against a live Docker Desktop daemon.
+- The Windows named-pipe transport is tested with a fake Engine API and has been checked against Docker Desktop for container listing. Live Compose attribution is not tested in CI.
 
 ## Performance
 
