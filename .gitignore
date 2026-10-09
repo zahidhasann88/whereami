@@ -1,0 +1,30 @@
+# Build outputs
+/bin/
+/dist/
+/whereami
+/whereami.exe
+
+# Test and coverage output
+*.test
+*.out
+coverage.html
+
+# Editor and OS noise
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local environment secrets (keep distributable examples)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+!.env.dist
+
+# Local build instructions and historical reports
+/build-prompt.txt
+/after-build-report.txt
+/PUBLISHING.md
+/VERIFICATION.md

@@ -1,0 +1,68 @@
+[
+  {
+    "Id": "9f1c2a7b3d4e5f60718293a4b5c6d7e8f9012345678901234567890abcdef12",
+    "Names": ["/shop-web-1"],
+    "Image": "shop-web:latest",
+    "State": "running",
+    "Status": "Up 3 hours",
+    "Labels": {
+      "com.docker.compose.project": "shop",
+      "com.docker.compose.project.working_dir": "/work/shop",
+      "com.docker.compose.service": "web"
+    },
+    "Ports": [
+      {"IP": "0.0.0.0", "PrivatePort": 8000, "PublicPort": 8080, "Type": "tcp"}
+    ]
+  },
+  {
+    "Id": "aa11bb22cc33dd44ee55ff6600112233445566778899aabbccddeeff00112233",
+    "Names": ["/shop-db-1"],
+    "Image": "postgres:16",
+    "State": "running",
+    "Status": "Up 3 hours",
+    "Labels": {
+      "com.docker.compose.project": "shop",
+      "com.docker.compose.project.working_dir": "/work/shop",
+      "com.docker.compose.service": "db"
+    },
+    "Ports": [
+      {"PrivatePort": 5432, "Type": "tcp"}
+    ]
+  },
+  {
+    "Id": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "Names": ["/other-shop-web-1"],
+    "Image": "shop-web:latest",
+    "State": "running",
+    "Status": "Up 1 day",
+    "Labels": {
+      "com.docker.compose.project": "shop",
+      "com.docker.compose.project.working_dir": "/elsewhere/shop-copy",
+      "com.docker.compose.service": "web"
+    },
+    "Ports": []
+  },
+  {
+    "Id": "fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210",
+    "Names": ["/unrelated-redis"],
+    "Image": "redis:7",
+    "State": "running",
+    "Status": "Up 2 days",
+    "Labels": {},
+    "Ports": [
+      {"IP": "127.0.0.1", "PrivatePort": 6379, "PublicPort": 6379, "Type": "tcp"}
+    ]
+  },
+  {
+    "Id": "1111222233334444555566667777888899990000aaaabbbbccccddddeeeeffff",
+    "Names": ["/legacy-job"],
+    "Image": "busybox",
+    "State": "running",
+    "Status": "Up 5 minutes",
+    "Labels": {
+      "com.docker.compose.project": "shop",
+      "com.docker.compose.service": "cron"
+    },
+    "Ports": []
+  }
+]

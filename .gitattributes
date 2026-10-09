@@ -1,0 +1,6 @@
+# Keep source files consistent across Windows, macOS and Linux checkouts.
+* text=auto
+*.go text eol=lf
+*.golden text eol=lf
+*.sh text eol=lf
+Makefile text eol=lf

@@ -1,0 +1,9 @@
+[package]
+name = "svc"
+version = "0.2.0"
+edition = "2021"
+rust-version = "1.70"
+
+[dependencies]
+axum = "0.7"
+tokio = { version = "1", features = ["full"] }

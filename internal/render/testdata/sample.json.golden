@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "tool": "whereami",
+  "version": "0.1.0",
+  "generated_at": "2026-10-10T09:30:00Z",
+  "path": "/home/dev/code/api",
+  "sections": [
+    {
+      "name": "project",
+      "status": "ok",
+      "data": {
+        "dir": "/home/dev/code/api",
+        "root": "/home/dev/code/api",
+        "root_source": "git",
+        "name": "github.com/acme/api",
+        "types": [
+          "Go",
+          "Node.js",
+          "TypeScript"
+        ],
+        "frameworks": [
+          "Gin",
+          "Next.js"
+        ],
+        "package_managers": [
+          "go modules",
+          "pnpm"
+        ],
+        "manifests": [
+          "go.mod",
+          "package.json",
+          "tsconfig.json"
+        ]
+      }
+    },
+    {
+      "name": "git",
+      "status": "ok",
+      "data": {
+        "branch": "feature/login",
+        "detached": false,
+        "unborn": false,
+        "upstream": "origin/feature/login",
+        "ahead": 2,
+        "behind": 1,
+        "clean": false,
+        "staged": 1,
+        "modified": 3,
+        "untracked": 2,
+        "conflicted": 0,
+        "last_commit": {
+          "hash": "a1b2c3d",
+          "subject": "Add login handler",
+          "relative_time": "2 hours ago",
+          "date": "2026-10-10T08:00:00+06:00",
+          "author": "Jane Doe"
+        },
+        "remote": {
+          "name": "origin",
+          "url": "https://github.com/acme/api.git"
+        },
+        "stashes": 1
+      }
+    },
+    {
+      "name": "runtime",
+      "status": "ok",
+      "data": {
+        "runtimes": [
+          {
+            "name": "go",
+            "version": "1.23.4",
+            "pins": [
+              {
+                "source": "go.mod",
+                "expr": "\u003e=1.22",
+                "status": "match"
+              }
+            ]
+          },
+          {
+            "name": "node",
+            "version": "20.11.0",
+            "pins": [
+              {
+                "source": ".nvmrc",
+                "expr": "18",
+                "status": "mismatch"
+              }
+            ]
+          },
+          {
+            "name": "npm",
+            "version": "10.2.4"
+          },
+          {
+            "name": "python",
+            "reason": "not installed",
+            "pins": [
+              {
+                "source": ".python-version",
+                "expr": "3.12",
+                "status": "missing"
+              }
+            ]
+          }
+        ],
+        "warnings": [
+          "node 20.11.0 does not satisfy 18 (.nvmrc)"
+        ]
+      }
+    },
+    {
+      "name": "ports",
+      "status": "ok",
+      "data": {
+        "listening": [
+          {
+            "port": 3000,
+            "proto": "tcp",
+            "addresses": [
+              "127.0.0.1",
+              "::1"
+            ],
+            "pid": 4812,
+            "process": "node",
+            "cwd": ""
+          },
+          {
+            "port": 5432,
+            "proto": "tcp",
+            "addresses": [
+              "0.0.0.0"
+            ],
+            "pid": 2210,
+            "process": "postgres",
+            "cwd": ""
+          }
+        ],
+        "inaccessible": 2
+      }
+    },
+    {
+      "name": "containers",
+      "status": "ok",
+      "data": {
+        "docker_available": true,
+        "compose_files": [
+          {
+            "path": "docker-compose.yml",
+            "project": "api",
+            "services": [
+              "web",
+              "db"
+            ]
+          }
+        ],
+        "running": [
+          {
+            "id": "9f1c2a7b3d4e",
+            "name": "api-web-1",
+            "image": "api-web:latest",
+            "state": "",
+            "status": "Up 3 hours",
+            "ports": [
+              "0.0.0.0:8080-\u003e8000/tcp"
+            ],
+            "matched_by": "working_dir"
+          },
+          {
+            "id": "aa11bb22cc33",
+            "name": "api-db-1",
+            "image": "postgres:16",
+            "state": "",
+            "status": "Up 3 hours",
+            "ports": [
+              "5432/tcp"
+            ],
+            "matched_by": "working_dir"
+          }
+        ]
+      }
+    },
+    {
+      "name": "config",
+      "status": "ok",
+      "data": {
+        "env_files": [
+          {
+            "name": ".env",
+            "variables": 4,
+            "gitignore": "not_ignored",
+            "keys": [
+              "DATABASE_URL",
+              "API_KEY",
+              "DEBUG",
+              "PORT"
+            ]
+          },
+          {
+            "name": ".env.local",
+            "variables": 1,
+            "gitignore": "ignored"
+          },
+          {
+            "name": ".env.example",
+            "variables": 4,
+            "template": true
+          }
+        ],
+        "files": [
+          {
+            "path": "Dockerfile",
+            "kind": "dockerfile"
+          },
+          {
+            "path": "docker-compose.yml",
+            "kind": "compose"
+          },
+          {
+            "path": "Makefile",
+            "kind": "makefile"
+          },
+          {
+            "path": ".github/workflows/ci.yml",
+            "kind": "ci"
+          }
+        ],
+        "warnings": [
+          ".env is not gitignored; add it to .gitignore before committing"
+        ]
+      }
+    }
+  ]
+}

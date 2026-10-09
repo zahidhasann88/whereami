@@ -1,0 +1,42 @@
+# golangci-lint v1.64.x configuration (the version pinned in CI and the Makefile).
+run:
+  timeout: 5m
+  tests: true
+
+linters:
+  disable-all: true
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    - gofmt
+    - misspell
+    - unconvert
+    - bodyclose
+    - errorlint
+    - gocritic
+    - nolintlint
+    - revive
+
+linters-settings:
+  errcheck:
+    check-type-assertions: false
+    check-blank: false
+  gocritic:
+    enabled-tags:
+      - diagnostic
+      - style
+  revive:
+    rules:
+      - name: exported
+        disabled: true
+      - name: package-comments
+        disabled: false
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0

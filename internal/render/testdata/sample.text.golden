@@ -1,0 +1,44 @@
+whereami 0.1.0 - /home/dev/code/api
+
+Project
+  Path        /home/dev/code/api
+  Root        /home/dev/code/api (git root)
+  Name        github.com/acme/api
+  Types       Go, Node.js, TypeScript
+  Frameworks  Gin, Next.js
+  Managers    go modules, pnpm
+  Manifests   go.mod, package.json, tsconfig.json
+
+Git
+  Branch      feature/login -> origin/feature/login (ahead 2, behind 1)
+  State       dirty - 1 staged, 3 modified, 2 untracked
+  Last commit a1b2c3d "Add login handler" - 2 hours ago by Jane Doe
+  Remote      https://github.com/acme/api.git (origin)
+  Stashes     1
+
+Runtime
+  go        1.23.4             [ok] pinned >=1.22 by go.mod
+  node      20.11.0            [warn] pinned 18 by .nvmrc - mismatch
+  npm       10.2.4
+  python    not installed      [warn] pinned 3.12 by .python-version - not installed
+
+Ports
+  :3000   node       pid 4812    127.0.0.1, ::1
+  :5432   postgres   pid 2210    0.0.0.0
+  2 other listener(s) had unreadable working directories and were not checked
+
+Containers
+  Compose     docker-compose.yml (project api; services web, db)
+  Running     api-web-1 - api-web:latest - Up 3 hours - 0.0.0.0:8080->8000/tcp
+              api-db-1 - postgres:16 - Up 3 hours - 5432/tcp
+
+Config
+  Env         .env - 4 variables - [warn] NOT gitignored
+              keys: DATABASE_URL, API_KEY, DEBUG, PORT
+  Env         .env.local - 1 variable - [ok] gitignored
+  Env         .env.example - 4 variables - template - committed
+  Compose     docker-compose.yml
+  Dockerfile  Dockerfile
+  Makefile    Makefile
+  CI          .github/workflows/ci.yml
+  [warn] .env is not gitignored; add it to .gitignore before committing

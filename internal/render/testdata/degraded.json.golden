@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "tool": "whereami",
+  "version": "0.1.0",
+  "generated_at": "0001-01-01T00:00:00Z",
+  "path": "/tmp/scratch",
+  "sections": [
+    {
+      "name": "project",
+      "status": "ok",
+      "data": {
+        "dir": "/tmp/scratch",
+        "root": "/tmp/scratch",
+        "root_source": "directory",
+        "types": [],
+        "frameworks": [],
+        "package_managers": [],
+        "manifests": []
+      }
+    },
+    {
+      "name": "git",
+      "status": "unavailable",
+      "reason": "not a git repository"
+    },
+    {
+      "name": "runtime",
+      "status": "ok",
+      "data": {
+        "runtimes": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "ports",
+      "status": "timed_out",
+      "reason": "timed out after 2s"
+    },
+    {
+      "name": "containers",
+      "status": "skipped"
+    },
+    {
+      "name": "config",
+      "status": "ok",
+      "data": {
+        "env_files": [],
+        "files": [],
+        "warnings": []
+      }
+    }
+  ]
+}
