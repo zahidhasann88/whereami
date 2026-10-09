@@ -57,6 +57,8 @@ whereami uses [spf13/cobra](https://github.com/spf13/cobra) for the command line
 
 ## Example
 
+![Whereami showing a project summary on Windows](docs/images/whereami-summary.png)
+
 Real output from this tool, run in a demo project (a Next.js app with a real git history, a listener on port 3000, and a `.env` file that is not gitignored). It was captured from a pipe, so it has no colour or symbols. In a terminal the same lines use colour and ✓ / ⚠ markers.
 
 ```
