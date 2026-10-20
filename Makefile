@@ -24,7 +24,7 @@ test: ## Run unit and integration tests
 vet: ## Run go vet
 	go vet ./...
 
-lint: ## Run golangci-lint (v1.64.8, see CONTRIBUTING.md)
+lint: ## Run golangci-lint (v1.64.8)
 	golangci-lint run ./...
 
 fmt: ## Format all Go files
